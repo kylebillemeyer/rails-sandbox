@@ -1,4 +1,12 @@
 RailsSandbox::Application.routes.draw do
+  root :to => 'static#home'
+  
+  resources :users
+  resources :sessions
+
+  match ':action' => 'static#:action'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

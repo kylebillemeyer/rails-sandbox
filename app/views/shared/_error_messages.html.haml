@@ -1,0 +1,8 @@
+- if target.errors.any?
+  .error-container
+    .error-header
+      %h4 Form is invalid
+    .error-body
+      %ul
+        - target.errors.messages.each do |k,v| puts
+          %li= k.to_s.titleize + " " + v.first

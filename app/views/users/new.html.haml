@@ -1,0 +1,14 @@
+%h2 Register Account
+= form_for @user do |f|
+  = render "shared/error_messages", :target => @user
+  .field
+    = f.label :email, 'Email:'
+    = f.text_field :email
+  .field
+    = f.label :password, 'Password:'
+    = f.password_field :password
+  .field
+    = f.label :password_confirmation, 'Re-enter Password:'
+    = f.password_field :password_confirmation
+  .action
+    = f.submit :class => "submit-button"

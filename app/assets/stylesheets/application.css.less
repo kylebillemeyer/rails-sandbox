@@ -1,0 +1,123 @@
+@import "twitter/bootstrap/bootstrap";
+
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_self
+*= require_tree .
+*/
+
+@errorBackgroundDark:  red;
+
+.clear-div{
+  clear: both;
+}
+
+.submit-button{
+  display: block;
+  margin: 10px 0;
+}
+
+body{
+  font-size: 1em;
+  padding-top: 2.5em;
+}
+
+
+/* Header */
+
+
+.navbar{
+  font-size: .875em;
+  .navbar-inner{
+    .login-links {
+      a{
+        float: right;
+        margin-right: .75em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+      }
+    }
+    .brand{
+      margin-left: 0;
+    }
+  } 
+}
+
+
+
+
+
+/* Flash */
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+  width: 400px;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+
+
+
+
+
+/* Errors */
+
+.error-corners-top{  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.error-corners-bottom{  
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.error-container{
+  .error-corners-top;
+  .error-corners-bottom;
+
+  //color: @errorText;
+  background-color: @errorBackground;
+  max-width: 500px;
+  margin: 2em 0;
+}
+
+.error-header{
+  .error-corners-top;
+
+  background-color: @errorBackgroundDark;
+
+  h4{
+    padding: .5em 1em;
+    margin: 0;
+    color: white;
+  }
+}
+
+.error-body{
+  .error-corners-bottom;
+  padding: 1em;
+  border: thin solid @errorBackgroundDark;
+}
+
+.field_with_errors>input{
+  border-color: @errorBackgroundDark;
+}

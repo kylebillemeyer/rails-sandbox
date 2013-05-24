@@ -1,0 +1,10 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .login-links
+      - if !current_user
+        = link_to "Sign Up", new_user_path
+        = link_to "Login", new_session_path
+      - else
+        = link_to "View Account", "#"
+    = link_to "Rails Sandbox", root_path, { :class => 'brand' }
+    .clear-div
