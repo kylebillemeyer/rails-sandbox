@@ -12,4 +12,10 @@ class SessionsController < ApplicationController
       render "new"
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    flash.now.notice = "You are now logged out!"
+    redirect_to :back
+  end
 end
